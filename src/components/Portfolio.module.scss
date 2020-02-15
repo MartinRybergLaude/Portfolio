@@ -1,0 +1,19 @@
+@import 'src/variables';
+
+.wrapper {
+    margin: 0 auto;
+    margin-top: -4vh;
+}
+.wrapperItems {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 80rem;
+    padding: 0.5rem;
+}
+@media(min-width: 30rem) {
+    .wrapperItems {
+        margin: 2rem auto;
+    }
+}

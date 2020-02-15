@@ -1,0 +1,42 @@
+@import 'src/variables';
+
+.wrapper {
+    margin: 2rem 1rem;
+    display: inline-block;
+    text-align: start;
+    max-width: 30rem;
+}
+.link {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.link p {
+    font-size: 1rem;
+    color: $color-text-secondary;
+    word-break: break-all;
+}
+.link:first-of-type {
+    margin-top: 0;
+}
+.link span {
+    color: $color-primary;
+    font-weight: 900;
+}
+.link:hover p {
+    text-decoration: underline;
+}
+.icon {
+    color: $color-text-secondary;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+@media(min-width: 30rem) {
+    .link p {
+        font-size: 1.25rem;
+    }
+    .icon {
+        margin-right: 2rem;
+    }
+}

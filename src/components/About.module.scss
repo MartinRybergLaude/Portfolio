@@ -1,0 +1,13 @@
+@import 'src/variables';
+
+.wrapper {
+    display: inline-block;
+    margin: 2rem auto;
+}
+.text {
+    margin: 0 1rem;
+    max-width: 40rem;
+}
+.text:last-of-type {
+    margin-top: 1rem;
+}

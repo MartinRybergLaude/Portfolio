@@ -1,0 +1,49 @@
+@import 'src/variables';
+
+.wrapper {
+    margin: 0.5rem;
+    height: auto;
+    width: 100%;
+    background-color: $color-primary;
+    border-radius: 4px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    color: $color-text-primary-inv
+}
+.wrapper:hover {
+    cursor: pointer;
+}
+.wrapper:hover .title {
+    text-decoration: underline;
+}
+.paragraph {
+    color: $color-text-secondary-inv;
+    line-height: 1.25;
+    flex: 1 1 auto;
+}
+.tags {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top:1rem;
+}
+.tag {
+    color: $color-text-primary;
+    font-weight: 500;
+    background-color: $color-background-light;
+    padding: 6px;
+    border-radius: 4px;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+
+@media(min-width: 30rem) {
+    .wrapper {
+        width: 25rem;
+        min-height: 14rem;
+    }
+}
