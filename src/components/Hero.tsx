@@ -5,12 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 
 export default function Hero() {
-    let wrapperHeight = window.innerHeight * 0.8;
-    let centerHeight = window.innerHeight * 0.2;
+
+    const heights = useHeights();
+
     return (
-        <div className={styles.wrapper} style={{height: wrapperHeight + "px"}}>
+        <div className={styles.wrapper} style={{height: heights.heightWrapper + "px"}}>
             <div className={styles.homeBackground}/>
-            <div className={styles.center} style={{ marginTop: centerHeight + "px" }}>
+            <div className={styles.center} style={{ marginTop: heights.heightCenter + "px" }}>
                 <h1 className={styles.title}>Martin Ryberg Laude</h1>
                 <h2 className={styles.desc}>Android & Web Developer</h2>
                 <div className={styles.locationWrapper}>
@@ -32,4 +33,30 @@ export default function Hero() {
             </div>
         </div>
     )
+}
+
+
+// Hook
+
+function useHeights() {
+
+    function getHeights() {
+        return {
+            heightWrapper: window.innerHeight * 0.8,
+            heightCenter: window.innerHeight * 0.2
+
+        };
+    }
+    const [heights, setHeights] = React.useState(getHeights);
+
+    React.useEffect(() => {
+        function handleResize() {
+            setHeights(getHeights());
+
+        }
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+
+    }, []); 
+    return heights;
 }
