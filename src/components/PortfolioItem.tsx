@@ -14,8 +14,8 @@ export default function PortfolioItem(props: Props) {
             <h3 className={styles.title}>{props.title}</h3>
             <p className={styles.paragraph}>{props.paragraph}</p>
             <div className={styles.tags}>
-                {props.tags.map(tag => {
-                    return (<p className={styles.tag} style={{color: props.color[0]}}>{tag}</p>)
+                {props.tags.map((tag, index) => {
+                    return (<p key={index} className={styles.tag} style={{color: props.color[0]}}>{tag}</p>)
                 })}
             </div>
         </div>

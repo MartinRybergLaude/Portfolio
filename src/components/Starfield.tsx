@@ -127,7 +127,6 @@ export class Starfield extends PureComponent<Props, States> {
             direction: props.direction
         }
         let particleAmount = Math.round(props.amountParticlesPer10KPixels * (state.width * state.height) / 10000)
-        console.log(particleAmount)
         for (let i = 0; i < particleAmount; ++i) {
             this.particles.push(new Particle(this.particleProps))
         }
