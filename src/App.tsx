@@ -1,22 +1,32 @@
 import React from 'react'
 import './App.scss'
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Portfolio from './components/Portfolio'
-import About from './components/About'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import Home from './Pages/Home'
+import CaseSolsken from './Pages/CaseSolsken'
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom"
 
 function App() {
   return (
-    <div>
-        <Header/>
-        <Hero/>
-        <Portfolio/>
-        <About/>
-        <Contact/>
-        <Footer/>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home/>
+        </Route>
+        <Route exact path="/solsken">
+          <CaseSolsken/>
+        </Route>
+        <Route exact path="/arrender">
+          <CaseSolsken />
+        </Route>
+        <Route exact path="/quantumsnake">
+          <CaseSolsken />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
