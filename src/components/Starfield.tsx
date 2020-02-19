@@ -45,7 +45,7 @@ export class Starfield extends PureComponent<Props, States> {
     }
     
     updateDimensions() {
-        if (this.div !== undefined && this.canvas !== undefined) {
+        if (this.div !== undefined && this.div !== null && this.canvas !== undefined && this.canvas !== null) {
             this.setState({ width: this.div.offsetWidth, height: this.div.offsetHeight});
         }
     }
@@ -58,6 +58,7 @@ export class Starfield extends PureComponent<Props, States> {
     }
     componentDidMount() {
         this.reset(this.props, this.state)
+        this.updateDimensions()
         window.addEventListener('resize', this._handleResize);
         this.tick()
     }
@@ -70,14 +71,13 @@ export class Starfield extends PureComponent<Props, States> {
     }
     render() {
         return (
-            <div>
-                <div ref={this.divRef} style={{ overflow: 'hidden', top: 0, left: 0, position: 'absolute', width: '100%', height: '100%' }}>
-                    <canvas
-                        ref={this.canvasRef}
-                        width={this.state.width}
-                        height={this.state.height}
-                    />
-                </div>
+            <div ref={this.divRef} style={{width: '100%', height: '100%' }}>
+                <canvas
+                    ref={this.canvasRef}
+                    width={this.state.width * devicePixelRatio}
+                    height={this.state.height * devicePixelRatio}
+                    style={{height: this.state.height, width: this.state.width}}
+                />
             </div>
         )
     }
@@ -102,7 +102,7 @@ export class Starfield extends PureComponent<Props, States> {
         if (!ctx) return
         ctx.save()
         ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-
+        ctx.scale(devicePixelRatio, devicePixelRatio)
         for (let i = 0; i < this.particles.length; ++i) {
             const p = this.particles[i]
             ctx.fillStyle = 'rgba(255,255,255,' + p.alpha;

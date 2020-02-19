@@ -2,25 +2,24 @@
 
 .wrapper {
     width: 100%;
+    height: 40rem;
 }
 .homeBackground {
     position: absolute;
     z-index: -100;
     top: 0;
-    bottom: 0;
     right: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    height: inherit;
     background-attachment: fixed;
     transform-origin: top left;
     background: radial-gradient(ellipse at bottom, transparent 0%, transparent 15%, #5b62f3 15.1%, #283f72 30%, #1b2947 60%);
     background-size: 1000% 100%;
     background-position: center;
     overflow: hidden;
-    min-height: 30rem;
 }
 .center {
+    margin: 7rem 0;
     padding: 0 1rem;
     display: inline-flex;
     flex-direction: column;
@@ -60,11 +59,11 @@
 }
 .starsWrapper {
     width: 100%;
-    height: 100%;
+    height: inherit;
     top: 0;
     left: 0;
-    z-index: -20;
-    position: absolute;
+    z-index: -99;
+    position: fixed;
 }
 
 @media(min-width: 30rem) {
@@ -73,6 +72,12 @@
     }
     .desc {
         font-size: 1.6rem;
+    }
+    .wrapper {
+        height: 50rem;
+    }
+    .center {
+        margin: 10rem 0;
     }
 }
 

@@ -1,0 +1,50 @@
+@import 'src/variables';
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main {
+    line-height: 0.8;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10rem;
+    font-weight: 700;
+    color: $color-text-third;
+    margin-bottom: 2rem;
+}
+.mainAlt {
+    line-height: 1;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $color-text-third;
+    margin-bottom: 2rem;
+}
+.below {
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    color: $color-text-primary;
+}
+.button {
+    margin-top: 2rem;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    top: 0;
+    padding: 0.8rem 5.5rem;
+    border-radius: 4px;
+    background-color: $color-primary;
+    color: $color-text-primary-inv;
+    font-weight: 600;
+    box-shadow: 0px 7px 0px 0px darken($color-primary, 5%);
+}
+.button:active {
+    top: 7px;
+    box-shadow: 0px 0px 0px 0px darken($color-primary, 5%);
+}

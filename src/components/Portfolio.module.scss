@@ -2,7 +2,7 @@
 
 .wrapper {
     margin: 0 auto;
-    margin-top: -4vh;
+    margin-top: -11rem;
 }
 .wrapperItems {
     margin: 1rem auto;
@@ -13,6 +13,10 @@
     padding: 0.5rem;
 }
 @media(min-width: 30rem) {
+    .wrapper {
+        margin: 0 auto;
+        margin-top: -12rem;
+    }
     .wrapperItems {
         margin: 2rem auto;
     }

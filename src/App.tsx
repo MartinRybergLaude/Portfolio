@@ -1,7 +1,8 @@
 import React from 'react'
 import './App.scss'
 import Home from './Pages/Home'
-import CaseSolsken from './Pages/CaseSolsken'
+import NotFound from './Pages/NotFound'
+import UnderConstruction from './Pages/UnderConstruction'
 
 import {
   BrowserRouter as Router,
@@ -17,13 +18,16 @@ function App() {
           <Home/>
         </Route>
         <Route exact path="/solsken">
-          <CaseSolsken/>
+          <UnderConstruction/>
         </Route>
         <Route exact path="/arrender">
-          <CaseSolsken />
+          <UnderConstruction />
         </Route>
         <Route exact path="/quantumsnake">
-          <CaseSolsken />
+          <UnderConstruction />
+        </Route>
+        <Route>
+          <NotFound/>
         </Route>
       </Switch>
     </Router>
