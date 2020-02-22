@@ -1,23 +1,23 @@
-@import 'src/variables';
+@import "src/variables";
 
 .wrapper {
-    margin: 0 auto;
-    margin-top: -11rem;
+  margin: 0 auto;
+  margin-top: -11rem;
 }
 .wrapperItems {
-    margin: 1rem auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 80rem;
-    padding: 0.5rem;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 80rem;
+  padding: 0.5rem;
 }
-@media(min-width: 30rem) {
-    .wrapper {
-        margin: 0 auto;
-        margin-top: -12rem;
-    }
-    .wrapperItems {
-        margin: 2rem auto;
-    }
+@media (min-width: 30rem) {
+  .wrapper {
+    margin: 0 auto;
+    margin-top: -12rem;
+  }
+  .wrapperItems {
+    margin: 2rem auto;
+  }
 }
