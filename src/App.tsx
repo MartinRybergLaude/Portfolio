@@ -3,12 +3,16 @@ import './App.scss'
 import Home from './Pages/Home'
 import NotFound from './Pages/NotFound'
 import UnderConstruction from './Pages/UnderConstruction'
+import CasePool from './Pages/CasePool'
+import CaseQuantum from './Pages/CaseQuantum'
+import CaseSolsken from './Pages/CaseSolsken'
 
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom"
+
 
 function App() {
   return (
@@ -18,13 +22,16 @@ function App() {
           <Home/>
         </Route>
         <Route exact path="/solsken">
-          <UnderConstruction/>
+          <CaseSolsken />
         </Route>
         <Route exact path="/arrender">
           <UnderConstruction />
         </Route>
         <Route exact path="/quantumsnake">
-          <UnderConstruction />
+          <CaseQuantum />
+        </Route>
+        <Route exact path="/pool">
+          <CasePool />
         </Route>
         <Route>
           <NotFound/>

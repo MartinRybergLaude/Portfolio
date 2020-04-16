@@ -31,6 +31,13 @@ export default function Portfolio() {
                             color={["#E12856", "#EA6687"]}
                             tags={[".NET", "A* pathfinding", "Game Engine"]}/>
                     </Link>
+                    <Link to="/pool">
+                        <PortfolioItem 
+                            title="Pahlén Poolkalkylator"
+                            paragraph="An android application built for Pahlén AB for calculating the required actions for optimal pool water."
+                            color={["#1d4ad1", "#3489eb"]}
+                            tags={["Java", "MVP", "Clean Architecure"]}/>
+                    </Link>
                 </div>
         </div>
     )
