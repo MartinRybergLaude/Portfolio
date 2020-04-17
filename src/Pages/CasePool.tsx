@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './CasePool.module.scss'
 import screen1 from 'assets/pahlen_screenshot.png'
 import screen2 from 'assets/reachability.png'
 
 export default function CasePool() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.main}>

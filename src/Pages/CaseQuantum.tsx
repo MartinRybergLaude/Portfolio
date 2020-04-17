@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './CaseQuantum.module.scss'
 import screen1 from 'assets/pathfinding.gif'
 import screen2 from 'assets/quantum-screens.png'
 
 export default function CasePool() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.main}>

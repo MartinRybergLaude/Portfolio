@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './CaseSolsken.module.scss'
 import screen1 from 'assets/solsken-screens.png'
 
 export default function CasePool() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.main}>
@@ -78,7 +83,7 @@ export default function CasePool() {
                     <h2>Results</h2>
                     <p>The resulting app contains features like day by day, hour by hour forecasts up to 10 days ahead, saved locations, search location, weather map, visual charts as statistics overview for each day, many supported units, dark theme, relative wind direction, data source selection and multiple color themes. </p>
                     <p>The complete application can be found on the Play Store <a href="https://play.google.com/store/apps/details?id=com.martinryberglaude.solsken&hl=en">here.</a></p>
-                    <img src={screen1}/>
+                    <img src={screen1} alt="screenshot of solsken"/>
                 </div>
                 <div className={styles.container}>
                     <h2>Discussion</h2>
