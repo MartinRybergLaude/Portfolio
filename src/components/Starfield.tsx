@@ -105,7 +105,7 @@ export class Starfield extends PureComponent<Props, States> {
         ctx.scale(devicePixelRatio, devicePixelRatio)
         for (let i = 0; i < this.particles.length; ++i) {
             const p = this.particles[i]
-            ctx.fillStyle = 'rgba(255,255,255,' + p.alpha;
+            ctx.fillStyle = 'rgba(255,255,255,' + p.alpha + ')';
             ctx.fillRect(p.x, p.y, p.particleSize, p.particleSize)
         }
         ctx.restore()
