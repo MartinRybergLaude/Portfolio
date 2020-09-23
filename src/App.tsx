@@ -6,6 +6,7 @@ import UnderConstruction from './Pages/UnderConstruction'
 import CasePool from './Pages/CasePool'
 import CaseQuantum from './Pages/CaseQuantum'
 import CaseSolsken from './Pages/CaseSolsken'
+import CaseSolskenWeb from './Pages/CaseSolskenWeb'
 
 import {
   BrowserRouter as Router,
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route exact path="/solsken">
           <CaseSolsken />
+        </Route>
+        <Route exact path="/solskenweb">
+          <CaseSolskenWeb />
         </Route>
         <Route exact path="/arrender">
           <UnderConstruction />

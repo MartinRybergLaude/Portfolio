@@ -17,6 +17,20 @@ export default function Portfolio() {
                             color={["#006FFA", "#4E97FE"]}
                             tags={["Java", "MVP", "Clean Architecture"]}/>
                     </Link>
+                    <Link to="/solskenweb">
+                        <PortfolioItem 
+                            title="Solsken (web)"
+                            paragraph="The progressive web app version of Solsken, now with support for the whole world."
+                            color={["#1d976c", "#1ba977"]}
+                            tags={["React", "Sass", "Typescript", "CSS Modules"]} />
+                    </Link>
+                    <Link to="/pool">
+                        <PortfolioItem 
+                            title="Pahlén Poolkalkylator"
+                            paragraph="An android application built for Pahlén AB for calculating the required actions for optimal pool water."
+                            color={["#1d4ad1", "#3489eb"]}
+                            tags={["Java", "MVP", "Clean Architecure"]}/>
+                    </Link>
                     <Link to="/arrender">
                         <PortfolioItem
                             title="Arrender"
@@ -30,13 +44,6 @@ export default function Portfolio() {
                             paragraph="A C# .NET Framework console snake game with an A* powered enemy snake made in an 80's outrun theme."
                             color={["#E12856", "#EA6687"]}
                             tags={[".NET", "A* pathfinding", "Game Engine"]}/>
-                    </Link>
-                    <Link to="/pool">
-                        <PortfolioItem 
-                            title="Pahlén Poolkalkylator"
-                            paragraph="An android application built for Pahlén AB for calculating the required actions for optimal pool water."
-                            color={["#1d4ad1", "#3489eb"]}
-                            tags={["Java", "MVP", "Clean Architecure"]}/>
                     </Link>
                 </div>
         </div>
