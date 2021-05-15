@@ -81,14 +81,19 @@
 .downIcon {
   display: none;
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -10rem;
   color: $color-background-light;
   font-size: 1.5rem;
-  margin: 0 auto;
   &:hover {
     cursor: pointer;
+  }
+}
+.email {
+  display: none;
+  position: absolute;
+  color: $color-background-light;
+  font-size: 1.4rem;
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -106,23 +111,25 @@
     height: 50rem;
   }
   .center {
-    margin: 10rem 0;
+    margin: 15rem 0;
   }
 }
 
 @media (min-width: 60rem) {
   .wrapper {
     height: 130vh;
-    min-height: 62rem;
+    min-height: 44rem;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .center {
     position: relative;
-    margin-top: -30vh;
+    margin-top: -8vh;
+    padding: 0;
   }
   .subHeading {
+    padding: 0 0.5rem;
     flex-direction: row;
     h3 {
       font-size: 1.4rem;
@@ -151,6 +158,9 @@
     margin-top: 0;
   }
   .downIcon {
+    display: initial;
+  }
+  .email {
     display: initial;
   }
 }
