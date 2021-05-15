@@ -21,3 +21,8 @@
     margin: 2rem auto;
   }
 }
+@media (min-width: 60rem) {
+  .wrapper {
+    margin-top: -18rem;
+  }
+}
