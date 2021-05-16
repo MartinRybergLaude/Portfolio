@@ -20,11 +20,22 @@
     $color-background 15%,
     #393ea0 15.1%,
     #1f1e53 40%,
-    rgba(#1b1db1, 0.2) 60%
+    rgba(#3b3eff, 0.1) 60%
   );
   background-size: 1000% 100%;
   background-position: center;
   overflow: hidden;
+}
+.homeBackground:after {
+  content: "";
+  background-image: url("/assets/noise4.png");
+  height: 300%;
+  width: 300%;
+  top: -100%;
+  left: -50%;
+  opacity: 0.08;
+  position: fixed;
+  animation: grain 8s steps(10) infinite;
 }
 
 .center {
@@ -45,7 +56,7 @@
     color: $color-background-light;
     span {
       color: transparent;
-      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: $color-background-light;
     }
   }
@@ -163,5 +174,38 @@
   }
   .email {
     display: initial;
+  }
+}
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
   }
 }
