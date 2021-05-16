@@ -5,18 +5,21 @@ type Props = {
     title: string
     paragraph: string
     tags: string[]
-    color: string[]
+    img: string
 }
 export default function PortfolioItem(props: Props) {
 
     return (
-        <div className={styles.wrapper} style={{ background: "linear-gradient(45deg," + props.color[0] + "," + props.color[1] +")"}}>
-            <h3 className={styles.title}>{props.title}</h3>
-            <p className={styles.paragraph}>{props.paragraph}</p>
-            <div className={styles.tags}>
-                {props.tags.map((tag, index) => {
-                    return (<p key={index} className={styles.tag} style={{color: props.color[0]}}>{tag}</p>)
-                })}
+        <div className={styles.wrapper}>
+            <img src={props.img} alt="thumbnail"/>
+            <div className={styles.content}>
+                <h3 className={styles.title}>{props.title}</h3>
+                <p className={styles.paragraph}>{props.paragraph}</p>
+                <div className={styles.tags}>
+                    {props.tags.map((tag, index) => {
+                        return (<p key={index} className={styles.tag}>{tag}</p>)
+                    })}
+                </div>
             </div>
         </div>
     )
