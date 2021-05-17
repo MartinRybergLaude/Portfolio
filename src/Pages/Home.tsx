@@ -6,14 +6,12 @@ import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 export default function Home() {
     return (
-        <div>
+        <>
             <Hero />
-            <div className="siteBackground">
-                <Portfolio />
-                <About />
-                <Contact />
-                <Footer />
-            </div>
-        </div>
+            <Portfolio />
+            <About />
+            <Contact />
+            <Footer />
+        </>
     )
 }

@@ -4,7 +4,15 @@
   width: 100%;
   height: 40rem;
 }
-
+.blackBackground {
+  position: absolute;
+  z-index: -101;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: inherit;
+  background: #000;
+}
 .homeBackground {
   position: absolute;
   z-index: -100;

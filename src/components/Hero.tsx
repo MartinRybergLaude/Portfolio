@@ -34,6 +34,7 @@ export default function Hero() {
 
     return (
         <div className={styles.wrapper}>
+            <div className={styles.blackBackground} />
             <div className={styles.homeBackground} />
             <Header offset={offset}/>
             <div className={styles.center} ref={centerRef}>
