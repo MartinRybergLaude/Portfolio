@@ -53,20 +53,14 @@
   flex-direction: column;
   justify-content: left;
   h1 {
-    text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 700;
-    font-size: 9vw;
+    font-weight: 400;
+    font-size: 11vw;
     margin-top: 0;
     margin-bottom: 0;
     display: inline-block;
     text-align: center;
     color: $color-background-light;
-    span {
-      color: transparent;
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: $color-background-light;
-    }
   }
 }
 
@@ -77,7 +71,10 @@
   align-items: center;
   margin-top: 1rem;
   h3 {
+    font-size: 1rem;
     color: $color-background-light;
+    letter-spacing: 4px;
+    text-transform: uppercase;
   }
 }
 
@@ -92,6 +89,7 @@
     font-size: 1.3rem;
   }
   h3 {
+    text-transform: none;
     letter-spacing: 1px;
     font-weight: 400;
   }
@@ -147,11 +145,17 @@
     position: relative;
     margin-top: -8vh;
     padding: 0;
+    h1 span {
+      color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: $color-background-light;
+    }
   }
   .subHeading {
     padding: 0 0.5rem;
     flex-direction: row;
     h3 {
+      margin-right: 1rem;
       font-size: 1.4rem;
     }
     .innerWrapper:not(.ellipsisWrapper) {
@@ -176,6 +180,9 @@
   }
   .locationWrapper {
     margin-top: 0;
+    h3 {
+      margin-right: 0;
+    }
   }
   .downIcon {
     display: initial;
