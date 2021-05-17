@@ -3,10 +3,6 @@ import './App.scss'
 import Home from './Pages/Home'
 import NotFound from './Pages/NotFound'
 import UnderConstruction from './Pages/UnderConstruction'
-import CasePool from './Pages/CasePool'
-import CaseQuantum from './Pages/CaseQuantum'
-import CaseSolsken from './Pages/CaseSolsken'
-import CaseSolskenWeb from './Pages/CaseSolskenWeb'
 
 import {
   BrowserRouter as Router,
@@ -23,19 +19,19 @@ function App() {
           <Home/>
         </Route>
         <Route exact path="/solsken">
-          <CaseSolsken />
+          <UnderConstruction/>
         </Route>
         <Route exact path="/solskenweb">
-          <CaseSolskenWeb />
+          <UnderConstruction/>
         </Route>
-        <Route exact path="/arrender">
-          <UnderConstruction />
+        <Route exact path="/avocado">
+          <UnderConstruction/>
         </Route>
         <Route exact path="/quantumsnake">
-          <CaseQuantum />
+          <UnderConstruction/>
         </Route>
         <Route exact path="/pool">
-          <CasePool />
+          <UnderConstruction/>
         </Route>
         <Route>
           <NotFound/>

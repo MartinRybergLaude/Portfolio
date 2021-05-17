@@ -24,14 +24,11 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
-  background-color: #000;
+  background-color: $color-background-light;
   text-align: center;
   min-height: 100%;
   max-width: 100%;
   overflow-x: hidden;
-}
-.siteBackground {
-  background-color: $color-background;
 }
 
 h1 {
