@@ -2,11 +2,11 @@ import React from 'react'
 import styles from './Portfolio.module.scss'
 import PortfolioItem from './PortfolioItem'
 import {Link} from "react-router-dom"
-import imgSolsken from "assets/thumbnails/solskenandroid.png"
-import imgSolskenWeb from "assets/thumbnails/solskenweb.png"
-import imgPahlen from "assets/thumbnails/pahlen.png"
-import imgAvocado from "assets/thumbnails/avocado.png"
-import imgQuantum from "assets/thumbnails/quantum.png"
+import imgSolsken from "assets/thumbnails/solskenandroid.jpg"
+import imgSolskenWeb from "assets/thumbnails/solskenweb.jpg"
+import imgPahlen from "assets/thumbnails/pahlen.jpg"
+import imgAvocado from "assets/thumbnails/avocado.jpg"
+import imgQuantum from "assets/thumbnails/quantum.jpg"
 
 export default function Portfolio() {
     return (
