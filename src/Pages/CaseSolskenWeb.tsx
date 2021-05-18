@@ -4,6 +4,7 @@ import screen2 from "assets/screenshots/solskenweb/solskenweb2.png"
 import screen1 from "assets/screenshots/solskenweb/solskenweb.png"
 import screen from "assets/screenshots/solskenweb/solsken_desktop.png"
 import { useLocation } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 export default function CaseSolskenWeb() {
   const { pathname } = useLocation()
@@ -14,6 +15,9 @@ export default function CaseSolskenWeb() {
   
   return (
     <article className={styles.page}>
+      <Helmet>
+        <meta name="theme-color" content="#ffffff"/>
+      </Helmet>
       <header>
         <h1>Solsken PWA</h1>
         <p>Solsken /suːlˌɧeːn/ is a progressive web weather app. As opposed to the android variant, this one supports the whole world and is accessible on every platform with access to a web browser. Being a progressive web app, it's also installable as an app on some platforms.</p>
