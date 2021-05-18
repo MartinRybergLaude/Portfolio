@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import styles from './NotFound.module.scss'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet';
 
 interface Props {
     isUnfinished?: boolean
@@ -26,6 +27,9 @@ export default function NotFound(props: Props) {
     
     return (
         <div className={styles.wrapper}>
+            <Helmet>
+              <meta name="theme-color" content="#ffffff"/>
+            </Helmet>
             <p className={getClass()}>{getTitle()}</p>
             <p className={styles.below}>{getDesc()}</p>
             <Link to="/">
