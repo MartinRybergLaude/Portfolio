@@ -11,7 +11,6 @@ export default function Home() {
             <Portfolio />
             <About />
             <Contact />
-            <Footer />
         </>
     )
 }
