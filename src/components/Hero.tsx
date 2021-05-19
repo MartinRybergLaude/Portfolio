@@ -10,10 +10,13 @@ export default function Hero() {
     const [offset, setOffset] = useState<number>(0)
 
     useEffect(() => {
-        setOffset(getLeftOffset(centerRef.current))
+        const timer = setTimeout(() => {
+          setOffset(getLeftOffset(centerRef.current))
+        }, 400)
         window.addEventListener("resize", debounce(onResizeEnd, 300))
         return () => {
             window.removeEventListener("resize",debounce(onResizeEnd, 300))
+            clearTimeout(timer)
         }
     }, [])
     function debounce(func: () => void, time: number) {
