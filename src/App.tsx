@@ -8,6 +8,7 @@ import {
 import Home from './Pages/Home'
 import NotFound from './Pages/NotFound'
 import CaseSolskenWeb from 'Pages/CaseSolskenWeb'
+import CaseSolsken from 'Pages/CaseSolsken'
 import Footer from 'components/Footer'
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
               <Home/>
             </Route>
             <Route exact path="/solsken">
-              <NotFound isUnfinished={true}/>
+              <CaseSolsken/>
             </Route>
             <Route exact path="/solskenweb">
               <CaseSolskenWeb/>
