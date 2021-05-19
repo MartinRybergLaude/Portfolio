@@ -6,10 +6,11 @@ import {
   Route
 } from "react-router-dom"
 import Home from './Pages/Home'
+import Footer from 'components/Footer'
 import NotFound from './Pages/NotFound'
 import CaseSolskenWeb from 'Pages/CaseSolskenWeb'
 import CaseSolsken from 'Pages/CaseSolsken'
-import Footer from 'components/Footer'
+import CaseQuantum from 'Pages/CaseQuantum'
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
               <NotFound isUnfinished={true}/>
             </Route>
             <Route exact path="/quantumsnake">
-              <NotFound isUnfinished={true}/>
+              <CaseQuantum/>
             </Route>
             <Route exact path="/pool">
               <NotFound isUnfinished={true}/>
