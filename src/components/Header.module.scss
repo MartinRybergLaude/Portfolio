@@ -24,7 +24,7 @@
 .linkText {
   font-weight: 700;
   font-size: 1rem;
-  color: $color-background-light;
+  color: $color-background;
 }
 
 .linkText::after {
@@ -35,7 +35,7 @@
   right: 0;
   height: 3px;
   display: block;
-  background: $color-background-light;
+  background: $color-background;
   transform: scale(1, 1) translate3d(0, -10px, 0);
   transition: transform 80ms ease-in;
 }
