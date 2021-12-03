@@ -9,6 +9,8 @@ import Home from './Pages/Home'
 import Footer from 'components/Footer'
 import NotFound from './Pages/NotFound'
 import Loading from 'components/Loading'
+import CasePool from 'Pages/CasePool'
+import CaseAguacate from 'Pages/CaseAguacate'
 
 const CaseSolskenWeb = React.lazy(() => import("Pages/CaseSolskenWeb"))
 const CaseSolsken = React.lazy(() => import("Pages/CaseSolsken"))
@@ -31,13 +33,13 @@ function App() {
                   <CaseSolskenWeb/>
                 </Route>
                 <Route exact path="/avocado">
-                  <NotFound isUnfinished={true}/>
+                  <CaseAguacate/>
                 </Route>
                 <Route exact path="/quantumsnake">
                   <CaseQuantum/>
                 </Route>
                 <Route exact path="/pool">
-                  <NotFound isUnfinished={true}/>
+                  <CasePool/>
                 </Route>
                 <Route>
                   <NotFound/>
