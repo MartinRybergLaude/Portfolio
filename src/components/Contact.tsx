@@ -2,10 +2,8 @@ import React from 'react'
 import styles from './Contact.module.scss'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter, faInstagram, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons" 
 
 export default function Contact() {
     return (
@@ -14,6 +12,10 @@ export default function Contact() {
                 <h2 id="contact">Contact</h2>
             </div>
             <div className={styles.wrapper}>
+                <a className={styles.link} href="mailto:martin.ryberg.laude@gmail.com">
+                    <FontAwesomeIcon icon={faEnvelope} className={styles.icon}/>
+                    <p><span>martin.ryberg.laude@gmail.com</span></p>
+                </a>
                 <a className={styles.link} href="https://twitter.com/martini_rl">
                     <FontAwesomeIcon icon={faTwitter} className={styles.icon}/>
                     <p>twitter.com/<span>martini_rl</span></p>

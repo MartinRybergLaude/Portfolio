@@ -1,6 +1,5 @@
 @import "variables";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600,700|Roboto:400,900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Baskervville&family=Open+Sans:wght@300;400;600;700&display=swap");
 * {
   box-sizing: border-box;
   transition: all ease-in-out 100ms;
@@ -22,7 +21,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   background-color: $color-background;
   text-align: center;
@@ -31,22 +30,28 @@ body {
   overflow-x: hidden;
 }
 
+#content {
+  min-height: 100vh;
+}
+
 h1 {
+  font-family: "Baskervville", serif;
   color: $color-text-primary;
-  font-weight: 600;
-  font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 0;
+  font-size: 2.6rem;
 }
 
 h2 {
+  font-family: "Baskervville", serif;
   font-weight: 600;
   font-size: 1.625rem;
   color: $color-text-primary;
   text-align: center;
   margin: 0 auto;
   display: inline-block;
-  background: linear-gradient(transparent calc(100% - .5em), rgba($color-primary, .3) .5em);
+  background: linear-gradient(
+    transparent calc(100% - 0.5em),
+    rgba($color-primary, 0.3) 0.5em
+  );
 }
 
 h3 {
@@ -59,7 +64,6 @@ h3 {
 }
 
 p {
-  font-family: 'Roboto', sans-serif;
   text-align: start;
   padding: 0;
   color: $color-text-secondary;
@@ -67,7 +71,7 @@ p {
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 1.6;
+  line-height: 2;
 }
 
 a {
@@ -79,9 +83,20 @@ ul {
   list-style-type: none;
 }
 
-@media(min-width: 30rem) {
+li {
+  text-align: start;
+  padding: 0;
+  color: $color-text-secondary;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 2;
+}
+
+@media (min-width: 30rem) {
   h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   h2 {
@@ -90,5 +105,10 @@ ul {
 
   h3 {
     font-size: 1.25rem;
+  }
+}
+@media (min-width: 60rem) {
+  h1 {
+    font-size: 7rem;
   }
 }

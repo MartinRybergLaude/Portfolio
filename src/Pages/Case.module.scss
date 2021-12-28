@@ -1,0 +1,110 @@
+@import "src/variables";
+.page {
+  max-width: 60rem;
+  text-align: left;
+  margin: 0 auto;
+  padding: 1rem;
+  h1 {
+    color: $color-text-primary;
+    -webkit-text-fill-color: transparent;
+    background-image: url("/assets/mesh.png");
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: bg 20s linear infinite;
+    margin: 0;
+  }
+  a {
+    text-decoration: underline;
+    color: $color-text-secondary;
+  }
+}
+.info {
+  padding: 1rem 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 2px solid $color-background-dark;
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+  p {
+    font-size: 16px;
+    margin-right: 2rem;
+    span {
+      text-transform: uppercase;
+      margin-right: 0.2rem;
+      font-weight: 700;
+    }
+  }
+  .date {
+    margin-right: 0;
+  }
+}
+.section {
+  padding-top: 2rem;
+  p {
+    padding: 0.6rem 0;
+  }
+  span {
+    font-weight: 700;
+  }
+  h2 {
+    background: none;
+  }
+  ul {
+    background: $color-background-dark;
+    padding: 1rem;
+    padding-inline-start: 40px;
+    list-style-type: disc;
+    margin-block-start: 1rem;
+    margin-block-end: 1em;
+  }
+  li {
+    color: $color-text-primary;
+    &:not(:last-child) {
+      margin-bottom: 0.6rem;
+    }
+  }
+
+  .imgContainer {
+    margin: 1rem 0;
+    display: flex;
+    column-gap: 1rem;
+  }
+  div {
+    flex: 1;
+  }
+  img {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    max-width: 100%;
+  }
+  .imgDesc {
+    text-align: center;
+    font-style: italic;
+  }
+}
+@media (min-width: 40rem) {
+  .page {
+    padding: 2rem;
+  }
+}
+@keyframes bg {
+  0% {
+    background-position: 5% 5%;
+  }
+  25% {
+    background-position: 5% 95%;
+  }
+  50% {
+    background-position: 95% 95%;
+  }
+  75% {
+    background-position: 5% 95%;
+  }
+  100% {
+    background-position: 5% 5%;
+  }
+}

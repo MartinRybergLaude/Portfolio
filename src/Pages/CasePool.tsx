@@ -1,104 +1,61 @@
 import React, { useEffect } from 'react'
-import styles from './CasePool.module.scss'
-import screen1 from 'assets/pahlen_screenshot.png'
-import screen2 from 'assets/reachability.png'
+import styles from "./Case.module.scss"
+import screen1 from "assets/screenshots/pahlen/pahlen.png"
+import { useLocation } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
-export default function CasePool() {
+export default function CaseSolskenWeb() {
+  const { pathname } = useLocation()
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
-
-    return (
-        <div className={styles.wrapper}>
-            <div className={styles.main}>
-                <div className={styles.cardTitle}>
-                    <h1>Pahlén Poolkalkylator</h1>
-                    <p>Pahlén Poolkalkylator was a project assigned 
-                        during my summer work at Pahlén AB. The idea of making a calculator app 
-                        for pool owners arose from the confusion and tons of
-                        support question regarding the issue. Pool chemistry is complicated, 
-                        but users do not want complicated.The concept of a mobile app performing most of 
-                        the work for the pool owner had to be explored.
-                    </p>
-                </div>
-                <div className={styles.container}>
-                    <h2>Aim</h2>
-                        <p>The aim of this project was to realize a prototype of the idea of an android application calculating what a pool owner
-                    should improve regarding their pool chemistry. This has historically been a complicated task as the calculations contain a variety of variables impacting each other in different ways. An app would make this an easy task, by taking values entered by the user and returning every task and product required to achieve perfect values.
-                    </p>
-                    <p>On top of this, everything should be available in the most simple interface possible without sacrificing any functionality. It's always a challenge to get this right, and since business logic is fairly simple, this is what I planned to focus on more.</p>
-                </div>
-                <div className={styles.container}>
-                    <h2>Method</h2>
-                    <h4>Structure</h4>
-                    <p>The workflow of this project was a blend of my personal workflow at the time and the workflow of the company. It's important to integrate the structure into the company, to ensure a smooth flow. Here's an overview of the structure.
-                    </p>
-                    <ul>
-                        <li>
-                            <p>Writing a CRS including planned features, required assets and complementing information, as well as submitting this.</p>
-                        </li>
-                        <li>
-                            <p>Writing a schedule for the project with ETA and phases.</p>
-                        </li>
-                        <li>
-                            <p>Writing the app according to the written plan, features, and requirements.</p>
-                        </li>
-                        <li>
-                            <p>Writing and submitting a project conclusion,including string resources, color values and measurements and functionality.</p>
-                        </li>
-                    </ul>
-                    <h4>Development</h4>
-                    <p>Development was carried out according to schedule and plan. The important part for me was to stick to the originally planned features. It's all too easy for additional seemingly small ideas to be added over time but in the end the product risks straying far from the goal. The UI was designed with thoughts on reachability and being obvious to the user, while of course using company styles like font and colors. Reachability for button and form placements was studied using charts gathered from multiple sources.</p>
-                    <img src={screen2} alt="visual representation of phone reachability"/>
-                    <p>This was further improved by allowing the enter key to go to the next edittext needing to be filled. I used the same thinking when I created a way to show the results, where I ended up utilizing a bottom sheet to show the items. This way it's large-phone friendly while keeping it simple. Summarized, I ended up going with a single-screen single-activity design to not make a simple task overly complicated for the user.</p>
-                </div>
-                <div className={styles.container}>
-                    <h2>Results</h2>
-                    <p>The resulting application met the planned features and expectations, as well as the scheduled deadline. The prototype served it's purpose of showing as a prototype how pool chemistry can be simplified for the customer. Images of the complete application below.</p>
-                    <img src={screen1} alt="screenshot of poolkalkylator"/>
-                </div>
-                <div className={styles.container}>
-                    <h2>Discussion</h2>
-                    <p>What I think was most giving with this project was experience with company structure and integration into their workflow. That's a step towards a lot more real world work-programming, coming from hobby programming I'm used to. I believe this to valuable experience, which this project certainly helped me receiving.</p>
-
-                    <p>// Martin Ryberg Laude</p>
-                </div>
-            </div>
-            <div className={styles.side}>
-                <div className={styles.info}>
-                    <h3>Challenge</h3>
-                    <p>Write a prototype pool chemistry android app for pool owners, which is simple, easy to use and precise.</p>
-                    <h3>Solution</h3>
-                    <p>Creating a clear and functional application using tested algorithms, while presenting the results in an equally clear way.</p>
-                    <h3>Role</h3>
-                    <p>Android Developer</p>
-                    <h3>Company</h3>
-                    <p>Pahlén AB</p>
-                </div>
-                <div className={styles.sideCard + ' ' + styles.sideCardWork}>
-                    <h3>Workflow</h3>
-                    <ul>
-                        <li>
-                            <p>CRS</p>
-                        </li>
-                        <li>
-                            <p>Schedule</p>
-                        </li>
-                        <li>
-                            <p>Development</p>
-                        </li>
-                        <li>
-                            <p>Project conclusion</p>
-                        </li>
-                    </ul>
-                </div>
-                <div className={styles.sideCard + ' ' + styles.sideCardResults}>
-                    <h3>Resulting application</h3>
-                    <p>Reached the goals and served it's purpose. Deadline was kept.</p>
-                    <p>The project gave me experience with company workflow integration and real world work-programming.</p>
-                </div>
-            </div>
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
+  return (
+    <article className={styles.page}>
+      <Helmet>
+        <meta name="theme-color" content="#ffffff"/>
+      </Helmet>
+      <header>
+        <h1>Pahlén Poolkalkylator</h1>
+        <p>This solo project was built for Pahlén AB after discussions on how pool chemistry could be made easier for pool owners, and thereby lighten the load on support channels. The web app allows people to enter their current measured pool values, which is used to display a list of actions to take.</p>
+        <div className={styles.info}>
+          <div>
+            <p><span>Role:</span> Web Developer</p>
+            <p><span>Client:</span> Pahlén AB</p>
+          </div>
+          <p className={styles.date}>2020</p>
         </div>
-    )
+      </header>
+      <section className={styles.section}>
+        <h2>Aim</h2>
+        <p>Simplifying pool chemistry for pool owners themselves was the primary goal of this project. The algorithms used in the web app is mostly accessible only to the companies themselves and are rather complicated for non-technical people. The app was built to make the calculations available to the public, but in a manner that is easy to understand without having to call support. </p>
+      </section>
+      <section className={styles.section}>
+        <h2>Method</h2>
+        <p>Before being able to work on the programmatical part, there were some areas that needed ironing out. I wrote a list of all the assets I would require, both to gauge the size of the project and to be able to visualize a user interface.
+           In this list was among others the calculations to be used. At first, those calculations were used to determine what inputs the user would need to enter. Similarly, the products to be recommended to pool owners also had to be compiled. Following this, a user interface could be built to serve the requirements, along with following the company design profile to a satsifactory degree. The remainder of the workflow was fairly simple, as listed here: </p>
+        <ul>
+          <li>Compiling a requirement list.</li>
+          <li>Constructing an initial user interface and flow. </li>
+          <li>Writing the code to realize the idea and plan.</li>
+          <li>Bug fixing and minor corrections.</li>
+        </ul>
+      </section>
+      <section className={styles.section}>
+        <h2>Development</h2>
+        <p>There were no massive hurdles to overcome with this project, for good and bad. On the good side, everything went smoothly without hiccups and the product was completed on time. On the bad side, not much was learned on the programmatical side of things. The learning instead revovled around working with a company as a solo web developer, keeping times and following a more strict structure than what I was previously used to.</p>
+        <p>Another difference to prior projects was the close cooperation with people with specialist knowledge here, to ensure the correct and error free function of the software. There were a few instances of back and forth discussion around some parts of the application and how it could be improved.</p>
+      </section>
+      <section className={styles.section}>
+        <h2>Results</h2>
+        <p>Very satisfactory results! It's easy to use, mobile and desktop friendly, follows the theme of the company and does its intended purpose. Here is a screenshot. </p>
+        <div className={styles.imgContainer}>
+          <div>
+            <img loading="lazy" src={screen1} alt="screenshot of pahlén poolkalkylator"/>
+          </div>
+        </div>
+      </section>
+    </article>
+  )
 }

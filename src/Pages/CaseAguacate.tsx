@@ -2,11 +2,11 @@ import React, { useEffect } from 'react'
 import styles from "./Case.module.scss"
 import screen2 from "assets/screenshots/solskenweb/solskenweb2.png"
 import screen1 from "assets/screenshots/solskenweb/solskenweb.png"
-import screen from "assets/screenshots/solskenweb/solsken_desktop.png"
+import screen from "assets/screenshots/avocado/avocado.png"
 import { useLocation } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 
-export default function CaseSolskenWeb() {
+export default function CaseAguacate() {
   const { pathname } = useLocation()
 
   useEffect(() => {
@@ -19,39 +19,30 @@ export default function CaseSolskenWeb() {
         <meta name="theme-color" content="#ffffff"/>
       </Helmet>
       <header>
-        <h1>Solsken PWA</h1>
-        <p>Solsken /suːlˌɧeːn/ is a progressive web weather app. As opposed to the android variant, this one supports the whole world and is accessible on every platform with access to a web browser. Being a progressive web app, it's also installable as an app on some platforms.</p>
+        <h1>Aguacate</h1>
+        <p>Aguacate /aɡwaˈkate/ is a productivity timer. Since it's a progressive web app it's installable on most devices as well as accessible through the web.</p>
         <div className={styles.info}>
           <div>
-            <p><span>Live:</span> <a href="https://solsken.app">solsken.app</a></p>
+            <p><span>Live:</span> <a href="https://avocado.mrlaude.com">avocado.mrlaude.com</a></p>
             <p><span>Role:</span> Front-end, UI/UX</p>
             <p><span>Client:</span> Me</p>
           </div>
-          <p className={styles.date}>2020</p>
+          <p className={styles.date}>2021</p>
         </div>
       </header>
       <section className={styles.section}>
         <h2>Aim</h2>
-        <p>As I moved towards web development during 2019, I wanted to build something complete on my own. Since progressive web apps made huge leaps during the same year I wondered if a similar user experience to that of Solsken (android version) was achievable using this technology. The application would therefore be mobile-first. This would make Solsken accessible on all platforms with access to a web browser, a massive improvement to the android-only approach I used before.</p>
-        <p>A massive limitation of the android version was the fact that it only supported Scandinavia and Finland, so I vowed to support the entire world this time around.</p>
+        <p>To build a simple and efficient PWA pomodoro timer as smooth as it gets using web technology. There wasn't much more to it. I couldn't find a suitable product for myself so I made one.</p>
         <div className={styles.imgContainer}>
           <div>
-            <img loading="lazy" src={screen} alt="screenshot of solsken"/>
+            <img loading="lazy" src={screen} alt="screenshot of aguacate"/>
           </div>
         </div>
       </section>
       <section className={styles.section}>
         <h2>Method</h2>
-        <p>As opposed to my previous web projects, Solsken is more of an application than a website, and therefore I structured the project as such. The folder structure was based on "screens" and their subcomponents, while navigation was handled using React Router's MemoryRouter to simulate a native mobile experience. To complement this, CSS modules was used together with SCSS primarily for the variable system that SCSS brings. Typescript was used instead of Javascript because of the secure type system.</p>
-        <p>As for the workflow, git was used with micro-commits and a branch structure based on a dev branch and master branch, which represents public releases. <span>The general project frame looked somewhat like the following:</span></p>
-        <ul>
-          <li>Sketching wireframes and designs for the app and deciding the UX and UI.</li>
-          <li>Researching possible ways to architect the application with Javascript promises and components.</li>
-          <li>Writing the major networking part of the app to retrieve weather data asynchronously.</li>
-          <li>Building the UI and presenting the information.</li>
-          <li>Bug fixes.</li>
-        </ul>
-        <p>As for libraries the web app uses nothing out of the ordinary. Typescript, React Router, CSS Modules and i18next are the main libraries that provide the base for the application, while Framer Motion provides the animations.</p>
+        <p>As with most of my projects I designed UI and UX first. Following satisfactory results in that department, the repository set up remained likewise common for me with two general branches for quick efficient work (for such a small application).</p>
+        <p>I wanted to keep the app as lightweight and easily updatable as possible as well, so third party libraries were kept to an absolute minimum in the planning stage.</p>
       </section>
       <section className={styles.section}>
         <h2>Development</h2>

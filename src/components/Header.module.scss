@@ -3,6 +3,7 @@
 .navbar {
   height: 5rem;
   background: none;
+  animation: fadeIn 1s;
 }
 
 .nav {
@@ -24,7 +25,7 @@
 .linkText {
   font-weight: 700;
   font-size: 1rem;
-  color: $color-background-light;
+  color: $color-background;
 }
 
 .linkText::after {
@@ -35,9 +36,7 @@
   right: 0;
   height: 3px;
   display: block;
-  background: $color-primary;
-  transform: scale(1, 0) translate3d(0, -10px, 0);
-  transition: transform 80ms ease-in;
+  background: $color-background;
 }
 
 .link:hover .linkText {
@@ -46,8 +45,8 @@
 }
 
 .link:hover .linkText:after {
-  transition: transform 80ms ease-out;
-  transform: scale(1, 1) translate3d(0, 0, 0);
+  background: $color-primary;
+  transition: all 0.1s;
 }
 
 .link:active {
@@ -63,5 +62,22 @@
 @media (min-width: 40rem) {
   .nav {
     width: 30rem;
+  }
+}
+@media (min-width: 60rem) {
+  .navbar {
+    position: absolute;
+    padding: 0 0.5rem;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

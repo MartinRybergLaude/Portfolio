@@ -4,7 +4,15 @@
   width: 100%;
   height: 40rem;
 }
-
+.blackBackground {
+  position: absolute;
+  z-index: -101;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: inherit;
+  background: #000;
+}
 .homeBackground {
   position: absolute;
   z-index: -100;
@@ -16,15 +24,26 @@
   transform-origin: top left;
   background: radial-gradient(
     ellipse at bottom,
-    transparent 0%,
-    transparent 15%,
-    #5b62f3 15.1%,
-    #283f72 30%,
-    #1b2947 60%
+    $color-background 0%,
+    $color-background 15%,
+    #395da0 15.1%,
+    #1f1e53 40%,
+    rgba(#3b3eff, 0.1) 60%
   );
   background-size: 1000% 100%;
   background-position: center;
   overflow: hidden;
+}
+.homeBackground:after {
+  content: "";
+  background-image: url("/assets/noise4.png");
+  height: 300%;
+  width: 300%;
+  top: -100%;
+  left: -50%;
+  opacity: 0.08;
+  position: fixed;
+  animation: grain 8s steps(10) infinite;
 }
 
 .center {
@@ -33,42 +52,70 @@
   display: inline-flex;
   flex-direction: column;
   justify-content: left;
+  h1 {
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 11vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    text-align: center;
+    color: $color-background;
+    animation: fadeInMove 1s;
+  }
 }
 
-.title {
-  display: inline-block;
-  text-align: center;
-  color: $color-background-light;
-  font-size: 2rem;
-}
-
-.desc {
-  display: inline-block;
-  text-align: center;
-  margin: 0;
+.subHeading {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   margin-top: 1rem;
-  color: $color-background-light;
-  font-size: 1rem;
-  font-weight: 300;
-  background: none;
+  h3 {
+    font-size: 1rem;
+    color: $color-background;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
 }
 
 .locationWrapper {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  .locationIcon {
+    margin-right: 1.4rem;
+    color: $color-background;
+    font-size: 1.3rem;
+  }
+  h3 {
+    text-transform: none;
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
 }
 
-.locationIcon {
-  margin-right: 1rem;
-  color: $color-background-light;
+.downIcon {
+  display: none;
+  position: absolute;
+  color: $color-background;
   font-size: 1.5rem;
+  &:hover {
+    cursor: pointer;
+  }
+  animation: fadeIn 1s;
 }
-
-.locationText {
-  text-align: center;
-  color: $color-background-light;
+.email {
+  display: none;
+  position: absolute;
+  color: $color-background;
+  font-size: 1.4rem;
+  padding: 0 0.8rem;
+  &:hover {
+    text-decoration: underline;
+  }
+  animation: fadeIn 1s;
 }
 
 .starsWrapper {
@@ -76,38 +123,128 @@
   height: inherit;
   top: 0;
   left: 0;
-  z-index: -99;
+  z-index: -101;
   position: fixed;
 }
 
 @media (min-width: 30rem) {
-  .title {
-    font-size: 3rem;
-  }
-
-  .desc {
-    font-size: 1.6rem;
-  }
-
   .wrapper {
     height: 50rem;
   }
-
   .center {
-    margin: 10rem 0;
+    margin: 15rem 0;
   }
 }
 
 @media (min-width: 60rem) {
-  .title {
-    font-size: 5rem;
+  .wrapper {
+    height: 130vh;
+    min-height: 44rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-
-  .desc {
-    font-size: 2rem;
+  .center {
+    position: relative;
+    margin-top: -8vh;
+    padding: 0;
+    h1 span {
+      color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: $color-background;
+    }
   }
-
+  .subHeading {
+    padding: 0 0.5rem;
+    flex-direction: row;
+    h3 {
+      margin-right: 1rem;
+      font-size: 1.4rem;
+    }
+    .innerWrapper:not(.ellipsisWrapper) {
+      flex: 1;
+      min-width: -webkit-min-content;
+    }
+    .locationWrapper {
+      justify-content: flex-end;
+    }
+  }
+  .ellipsis {
+    width: 64px;
+    display: flex;
+    justify-content: space-between;
+    div {
+      height: 12px;
+      width: 12px;
+      background-color: $color-background;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  }
   .locationWrapper {
-    margin-top: 2rem;
+    margin-top: 0;
+    h3 {
+      margin-right: 0;
+    }
+  }
+  .downIcon {
+    display: initial;
+  }
+  .email {
+    display: initial;
+  }
+}
+@keyframes fadeInMove {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY();
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
   }
 }

@@ -2,9 +2,13 @@ import React from 'react'
 import styles from './Header.module.scss'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-export default function header() {
+interface Props {
+    offset: number
+}
+
+export default function header(props: Props) {
     return (
-        <nav className={styles.navbar}>
+        <nav className={styles.navbar} style={{top: props.offset - 48, left: props.offset}}>
             <ul className={styles.nav}>
                 <li>
                     <AnchorLink href="#projects" className={styles.link}>
